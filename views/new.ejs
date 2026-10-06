@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova mensagem</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <form method="POST" action="/new" class="cmd">
+        <div class="up-bar">
+            <span class="title">
+                <span class="icon">C:\</span> Prompt de Comando - new message
+            </span>
+            <span class="controls">
+                <span class="ctrl">&#8211;</span>
+                <span class="ctrl">&#9633;</span>
+                <a href="/" class="ctrl close" title="Voltar">&#10005;</a>
+            </span>
+        </div>
+
+        <div class="screen">
+            <p class="intro">Message Board [Versão 1.0.0]</p>
+            <p class="intro">Fill the fields and press Enter or click Send.</p>
+            <br>
+
+            <label class="field" for="name">
+                <span class="route">C:\Users\Guest&gt;</span>
+                <span class="label">name:</span>
+                <input type="text" id="name" name="name" placeholder="Miguel" autocomplete="off" autofocus required>
+            </label>
+
+            <label class="field" for="message">
+                <span class="route">C:\Users\Guest&gt;</span>
+                <span class="label">message:</span>
+                <input type="text" id="message" name="message" placeholder="..." autocomplete="off" required>
+            </label>
+        </div>
+
+        <button type="submit" class="new">
+            <span class="route">C:\Users\Guest&gt;</span>
+            <span class="placeholder">submit</span><span class="cursor"></span>
+        </button>
+    </form>
+</body>
+</html>

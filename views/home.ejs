@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="cmd">
+        <div class="up-bar">
+            <span class="title">
+                <span class="icon">C:\</span> Command Prompt
+            </span>
+            <span class="controls">
+                <span class="ctrl">&#8211;</span>
+                <span class="ctrl">&#9633;</span>
+                <span class="ctrl close">&#10005;</span>
+            </span>
+        </div>
+
+        <div class="screen">
+            <p class="intro">Mini Message Board [Versão 1.0.0]</p>
+            <p class="intro">(c) All rights reserved.</p>
+            <br>
+
+            <ul class="messages">
+                <% messages.map((message) => { %>
+                    <li class="message">
+                        <p class="meta">
+                            <span class="route">C:\Users\<%= message.user %>&gt;</span>
+                            <span class="time">[<%= message.added.toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' }) %>]</span>
+                        </p>
+                        <p class="text"><%= message.text %></p>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+
+        <a href="<%= link %>" class="new" id="open-modal">
+            <span class="route">C:\Users\Guest&gt;</span>
+            <span class="placeholder">new message</span><span class="cursor"></span>
+        </a>
+    </div>
+
+</body>
+</html>
