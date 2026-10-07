@@ -30,7 +30,7 @@ This project was made for practice only, as part of the [The Odin Project](https
 3. Start the server:
 
    ```
-   npm start
+   node --watch index.js
    ```
 
 4. Open `http://localhost:3030` in your browser. If your project uses a different port, change the number.
